@@ -29,6 +29,7 @@ has_many :groups, through: :groups_users
 |Column|Type|Options|
 |------|----|-------|
 |text|string|null: false|
+|image|string|
 |user_id|integer|null: false, foreign_key: user_id|
 |group_id|integer|null: false, foreign_key: group_id|
 ### Association
@@ -40,7 +41,6 @@ belongs_to :group
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 ### Association
 has_many :messages
 has_many :groups_users
