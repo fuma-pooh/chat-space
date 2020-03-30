@@ -18,8 +18,8 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
-|email|string|null: false|
+|name|text|null: false, indx: true|
+|email|string|null: false, unique: true|
 ### Association
 has_many :messages
 has_many :groups_users
@@ -28,8 +28,8 @@ has_many :groups, through: :groups_users
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
-|image|string|
+|text|string||
+|image|string||
 |user_id|integer|null: false, foreign_key: user_id|
 |group_id|integer|null: false, foreign_key: group_id|
 ### Association
