@@ -37,11 +37,11 @@
        color: white;
 
        &__pen{
-         text-decoration: none;
+        //  text-decoration: none;
          color: white;
        }
        &__sharin{
-         text-decoration: none;
+        //  text-decoration: none;
          color: white;
        }
       }
@@ -52,12 +52,26 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px; 
+    text-decoration: none;
 
    &__group {
     margin-bottom: 50px;
     height: 90px;
     font-size: 15px;
     color: white;
+    
+
+.link{
+  text-decoration: none;
+  color: white;
+ }
+
+    &__name{
+      color: white;
+    }
+    &__latest_message{
+      color: white;
+    }
    }
    &__group__latest-message {
     font-size: 11px;
@@ -168,7 +182,7 @@
             padding-bottom: 10px;
             // right: 130px;
             // top: 12px;
-            padding-left: 305px;
+            padding-left: 595px;
             width: 100px;
             // height: 100%;
             cursor: pointer;
