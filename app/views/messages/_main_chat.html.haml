@@ -4,6 +4,7 @@
       .chat-main__main-header__left-box__current-group
         = @group.name
       .chat-main__main-header__left-box__member-list
+        Member：
         - @group.users.each do |user|
           = user.name
     .chat-main__main-header__edit
@@ -15,14 +16,14 @@
   .chat-main__messages
     - @messages.each do |message|
       = render partial: "message", locals: { message: message }
-    .chat-main__messages__message
-      .chat-main__messages__message__info
-        .chat-main__messages__message__info__talker
-          fuma
-          .chat-main__messages__message__info__talker__date
-            2020/04/10/(sat) 24:00:00
-      .chat-main__messages__message__text
-        お腹すいて
+    -# .chat-main__messages__message
+    -#   .chat-main__messages__message__info
+    -#     .chat-main__messages__message__info__talker
+    -#       fuma
+    -#       .chat-main__messages__message__info__talker__date
+    -#         2020/04/10/(sat) 24:00:00
+    -#   .chat-main__messages__message__text
+        
       
   .chat-main__form
     .chat-main__form__new-message

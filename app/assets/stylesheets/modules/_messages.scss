@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-
+a{
+  text-decoration: none;
+}
 .chat-side {
   width: 300px;
   height: 100vh;
@@ -34,15 +36,15 @@
        justify-content: right;
        text-align: right;
        width: 60px;
-       color: white;
 
        &__pen{
-        //  text-decoration: none;
          color: white;
+         text-decoration: none;
+         
        }
        &__sharin{
-        //  text-decoration: none;
          color: white;
+         text-decoration: none;
        }
       }
     }
@@ -52,31 +54,29 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px; 
-    text-decoration: none;
+    overflow: scroll;
 
-   &__group {
-    // margin-bottom: 50px;
+    &__group {
     height: 90px;
     font-size: 15px;
     color: white;
-    
 
 .link{
   text-decoration: none;
   color: white;
  }
 
-    &__name{
-      color: white;
+      &__name{
+        color: white;
+        text-decoration: none;
+      }
+ 
+      &__latest-message {
+        font-size: 11px;
+        margin-top: 5px;
+        color: white;
+      }
     }
-    &__latest_message{
-      color: white;
-    }
-   }
-   &__group__latest-message {
-    font-size: 11px;
-    margin-top: 5px;
-   }
   }
 }
 
@@ -146,13 +146,18 @@
 
     &__new-message {
       display: flex;
-      padding-right: 115px;
+      // padding-right: 115px;
       width: 100%;
       margin: 0 auto;
+
+      .new_message {
+        width: 100%;
+      }
     
       &__input-box {
         position: relative;
         width: 100%;
+        display: flex;
 
       
         &__text {
@@ -161,8 +166,9 @@
           padding-left: 10px;
           border-style: none;
           color: #434a54;
-          position: relative;
-          padding-top: 12px;
+          // position: relative;
+          // padding-top: 12px;
+          line-height: 50px;
         }
 
         &__image {
@@ -170,10 +176,12 @@
           background-color: #ffffff;
           display: flex;
           align-items: center;
+          position: absolute;
+          right: 75px;
+          top: 9px;
           // position: relative;
-          width: 785px;
-          padding-left: 370px;
-          
+          // width: 785px;
+          // padding-left: 370px;
           // margin-bottom: 5px;
           
 
@@ -210,24 +218,23 @@
       &__button {
         color: white;
         text-decoration: none;
-        float: right;
-        position: absolute;
-        right: 40px;
+        // float: right;
+        // position: absolute;
+        // right: 40px;
         height: 50px;
         padding: 0 30px;
-        margin-left: 50px;
-        left: 750px;
-        bottom: 1px;
+        margin-left: 30px;
+        // left: 750px;
+        // bottom: 1px;
         background-color: #38aef0;
       }
      }
-      
     }
   }
   
-  // .none{
-  //   display: none;
-  // }
+  .none{
+    display: none;
+  }
 
   &__main-header { 
     height: 100px;
