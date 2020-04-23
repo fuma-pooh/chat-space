@@ -21,8 +21,7 @@ $(function(){
           return html;
         } else {
           var html =
-           `<div class="chat-main__messages__message">
-              <div class="chat-main__messages__message__info">
+           `<div class="chat-main__messages__message__info">
                 <div class="chat-main__messages__message__info__talker">
                   ${message.user_name}
                 </div>
@@ -34,7 +33,6 @@ $(function(){
               <p class="chat-main__messages__message__text">
                 ${message.content}
               </p>
-            </div>
             </div>`
          return html;
         };
@@ -59,6 +57,7 @@ $(function(){
      })
      .always(function() {
        $('.chat-main__form__new-message__send__button').prop('disabled', false);
+       $('form')[0].reset();
      })
      .fail(function() {
       alert("メッセージ送信に失敗しました");
